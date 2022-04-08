@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: vehicle-manager
+  datasource:
+    url: jdbc:mysql://localhost:3306/vdmDbDev?createDatabaseIfNotExist=true
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9002
+
