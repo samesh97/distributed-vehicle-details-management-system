@@ -1,3 +1,4 @@
 .idea
 vdm-commons.iml
 target
+.gitignore
