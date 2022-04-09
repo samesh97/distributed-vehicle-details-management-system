@@ -20,9 +20,15 @@ spring:
           enabled: 'true'
           lower-case-service-id: 'true'
       routes:
-      - id: VEHICLE-MANAGER
-        uri: lb://VEHICLE-MANAGER
-        predicates:
-        - Path=/vehicle/**
+        - id: VEHICLE-MANAGER
+          uri: lb://VEHICLE-MANAGER
+          predicates:
+            - Path=/vehicle/**
+
+        - id: OWNER-MANAGER
+          uri: lb://OWNER-MANAGER
+          predicates:
+            - Path=/owner/**
+
 
 
