@@ -13,20 +13,20 @@ import java.util.List;
 public class OwnerController {
 
     @Autowired
-    OwnerService ownerService;
+    OwnerService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Owner> getOwners() {
-        return ownerService.findAll();
+    public List<Owner> findAll() {
+        return service.findAll();
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public Owner getOwner(@PathVariable int id) {
-        return ownerService.findOne(id);
+    public Owner findOne(@PathVariable int id) {
+        return service.findOne(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public Owner save(@RequestBody Owner owner) {
-        return ownerService.save(owner);
+        return service.save(owner);
     }
 }
