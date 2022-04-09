@@ -1,7 +1,8 @@
 package com.samesh.vdm.vehicle.manager.repository;
 
-import vehicle.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
+import vehicle.Registration;
+import vehicle.Vehicle;
 
-public interface VehicleServiceRepository extends JpaRepository<Vehicle,Integer> {
+public interface VehicleRegisterRepository extends JpaRepository<Registration,Integer> {
 }

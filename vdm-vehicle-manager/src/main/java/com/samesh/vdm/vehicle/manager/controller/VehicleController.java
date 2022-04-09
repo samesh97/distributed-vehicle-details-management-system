@@ -8,25 +8,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/vehicle")
+@RequestMapping(value = "/vehicle/details")
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class VehicleController {
 
     @Autowired
-    VehicleService vehicleService;
+    VehicleService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Vehicle> getVehicles() {
-        return vehicleService.findAll();
+    public List<Vehicle> findAll() {
+        return service.findAll();
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public Vehicle getVehicle(@PathVariable int id) {
-        return vehicleService.findOne(id);
+    public Vehicle findOne(@PathVariable int id) {
+        return service.findOne(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public Vehicle save(@RequestBody Vehicle vehicle) {
-        return vehicleService.save(vehicle);
+        return service.save(vehicle);
     }
 }
