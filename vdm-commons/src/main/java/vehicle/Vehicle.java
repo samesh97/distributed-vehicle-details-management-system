@@ -13,7 +13,7 @@ public class Vehicle {
     @GeneratedValue
     private int vehicleId;
 
-    private int mYear;
+    private int manufacturedYear;
     private String color;
     private int engineCapacity;
     private String transmissionType;
